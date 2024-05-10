@@ -1,21 +1,21 @@
-<!-- 1. Write a program to create web page.  -->
+1. Write a program to create web page.
 
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Page</title>
-</head>
-
-<body>
-    <h2>
-        This is a program to make a web page.
-    </h2>
-</body>
-
-</html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Web Page</title>
+    </head>
+    
+    <body>
+        <h2>
+            This is a program to make a web page.
+        </h2>
+    </body>
+    
+    </html>
 
 
 
