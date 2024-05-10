@@ -1,0 +1,50 @@
+<!-- 1. Write a program to create web page.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page</title>
+</head>
+
+<body>
+    <h2>
+        This is a program to make a web page.
+    </h2>
+</body>
+
+</html>
+
+
+
+2. What are the features of HTML ?
+
+Features of HTML:
+1.It is easy to learn and easy to use.
+2.It is platform-independent.
+3.Images, videos, and audio can be added to a web page.
+
+
+
+3. What is MIME ?
+
+MIME:
+It is a multipurpose internet mail extention that takes care of transferring different kind of data through electronic
+mail service.
+
+
+4. What is HTML ?
+
+HTML stands for HyperText Markup Language and it is used to create webpages. It uses HTML tags and attributes to
+describe the structure and formatting of a web page.
+HTML has various elements, which are responsible for informing the search engines how to display page content.
+Ex:- headings, images, links, etc.
+
+
+
+5. What are void elements in HTML ?
+
+Empty or void elements are HTML elements that don't require a closing tag because they contain no content. They are
+self-contained independently complete, and don't rely on other elements to function.
