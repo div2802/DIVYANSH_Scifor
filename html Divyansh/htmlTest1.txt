@@ -8,13 +8,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Web Page</title>
     </head>
-    
+
     <body>
         <h2>
             This is a program to make a web page.
         </h2>
     </body>
-    
+
     </html>
 
 
@@ -22,9 +22,9 @@
 2. What are the features of HTML ?
 
 Features of HTML:
-1.It is easy to learn and easy to use.
-2.It is platform-independent.
-3.Images, videos, and audio can be added to a web page.
+1.Easy to learn and easy to use.
+2.Platform-independent.
+3.Images, audio, and video can be added to a web page.
 
 
 
