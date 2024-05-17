@@ -1,0 +1,41 @@
+Answer 1: 
+
+    CSS also referred as Cascading Style Sheets, is a language with which we can add design to our web pages, making them presentable.
+
+    Different types of selectors in CSS are: 
+        - Tag Selector.
+        - ID selector.
+        - Class Selector.
+        - Grouping Selector.
+
+
+Answer 2: 
+
+    The CSS box model is a container that contains multiple properties including borders, margin, padding, and the content itself. It is a fundamental concept that defines how the element's dimensions and spacing are calculated.
+
+    properties of box model: 
+
+        - Border: Line that surrounds the padding and content of element.
+        - Margin: Area outside the border.
+        - Padding: Space between the content and border.
+        - Content: Text, image, etc. that is displayed in element.
+
+
+Answer 4: 
+
+    There are three types of lists in HTML: 
+        - Ordered List.
+        - Unordered List.
+        - Definition List.
+
+    Ordered List: 
+        It is a type of list which gives numbering to the list items. It is also known as numbered list.
+        Ex: <ol> ... </ol>
+
+    Unordered List: 
+        It is a type of list which gives bullets to the list items. It is also known as bulleted list.
+        Ex: <ul> ... </ul>
+
+    Definition List: 
+        It is a type of list which gives definitions to definition terms. It is also known as discriptive list. 
+        Ex: <dl> ... </dl>
