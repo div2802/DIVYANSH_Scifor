@@ -1,0 +1,143 @@
+TEST 3: 
+
+
+Answer 1-
+
+    There are various formatting tags in HTML that allow us to structure our content:
+
+    1. <h1> to <h6>: Heading tags used to define headings of different types, where <h1> is the biggest heading, and <h6> is the smallest heading.
+
+    2. <p>: This tag defines a paragraph.
+
+    3. <br>: This tag inserts a line break.
+
+    4. <hr>: This tag creates a horizontal rule.
+
+    5. <b>: This tag renders text as bold text.
+
+    6. <strong>: This tag also renders text as bold text.
+
+    7. <i>: This tag renders text as italicized text.
+
+    8. <em>: This tag also renders text as italicized text.
+
+    9. <u>: This tag gives underline to text.
+
+    10. <span>: This tag defines an inline container.
+    
+    11. <div>: This tag defines a block-level container.
+
+    12. <sub>: This tag defines subscripted text.
+
+    13. <sup>: This tag defines superscripted text.
+
+
+
+
+
+Answer 2- 
+
+    To merge two rows or columns into a single row or column in an HTML table, we use the rowspan and colspan attributes on the <td> and <th> elements.
+
+    -Example for rowspan: 
+
+        <html>
+        <head>
+        <title>Merging Rows Example</title>
+        </head>
+        <body>
+        <table border="1">
+            <tr>
+                <th>Heading 1</th>
+                <th>Heading 2</th>
+            </tr>
+            <tr>
+                <td rowspan="2">Merged Cell</td>
+                <td>lorem</td>
+            </tr>
+            <tr>
+                <td>ipsum</td>
+            </tr>
+            <tr>
+                <td>dolor</td>
+                <td>sit amet</td>
+            </tr>
+        </table>
+        </body>
+        </html>
+
+
+
+    -Example for colpan: 
+
+        <html>
+        <head>
+        <title>Merging Columns Example</title>
+        </head>
+        <body>
+        <table border="1">
+            <tr>
+                <th>Heading 1</th>
+                <th colspan="2">Heading 2 and 3</th>
+            </tr>
+            <tr>
+                <td>lorem</td>
+                <td>ipsum</td>
+                <td>dolor</td>
+            </tr>
+            <tr>
+            <td>emet</td>
+            <td colspan="2">Merged Cell</td>
+        </tr>
+        </table>
+        </body>
+        </html>
+
+
+
+
+Answer 3-
+
+    Cellspacing and Cellpadding are two different attributes used in HTML tables to control the spacing of the table's cells.
+    The difference between them is that- 
+
+        Cellspacing specifies the space between the borders of table cells, while,
+        Cellpadding specifies the space between the content of a cell and its border.
+
+
+
+Answer 4- 
+
+    Semantic Elements: 
+        A semantic element clearly describes its meaning to us. The tags which accurately describe their purpose and the type of their content are called semantic tags.
+
+        Example- <h1>to<h6>, <form>, <table>, <header> and <footer>.
+
+
+Answer 5- 
+
+    Following is the code to insert background image in HTML webpage:
+
+        <html>
+        <head>
+        <title>Background Image</title>
+            <style>
+                body {
+                    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/011/189/205/small/light-blue-yellow-background-with-random-forms-vector.jpg');
+                }
+            </style>
+        </head>
+        <body>
+            <h1>Welcome to My Web Page</h1>
+            <p>This page has a background image.</p>
+        </body>
+        </html>
+
+
+
+
+Answer 6- 
+
+    In HTML the alt attribute is used within <img> tags to provide alternative text for an image.
+
+    Example: <img src="image.jpg" alt="title for the image">
