@@ -1,0 +1,36 @@
+form {
+    width: 15%;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #4549a0;
+    text-align: center;
+    margin-top: 100px;
+}
+
+form div {
+    margin-bottom: 12px;
+}
+
+input {
+    border: 1px solid #ffffff00;
+    padding: 7px;
+    width: 100%;
+}
+
+input:valid {
+    border-color: green;
+}
+
+input:invalid {
+    border-color: red;
+}
+
+#button {
+    background: #456fa0;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+}
