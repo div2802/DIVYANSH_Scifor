@@ -1,0 +1,107 @@
+<html>
+
+<head>
+    <title>Responsive Webpage</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer {
+            background-color: #404ab4;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #404ab4;
+        }
+
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .navbar a:hover {
+            background-color: #575eea;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+            height: 80vh;
+        }
+
+
+        @media (max-width: 760px) {
+            .navbar {
+                flex-direction: column;
+                background-color: #e1e4ff;
+            }
+
+            .navbar a {
+                color: #404ab4;
+            }
+
+            .content {
+                color: #575eea;
+                background-color: antiquewhite;
+            }
+
+            .footer {
+                background-color: #e1e4ff;
+                color: #404ab4;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+
+            .footer {
+                padding: 30px 0;
+                font-weight: bold;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .navbar a {
+                padding: 10px;
+                font-size: 18px;
+                font-weight: bold;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="content">
+        <h2>Welcome to my website!</h2>
+        <p>On reaching 760px width the navbar becomes vertical, the text becomes bold, text color and background color
+            changes.</p>
+    </div>
+
+    <div class="footer">
+        <p>&copy 2024 copyright @mywebsite.com</p>
+    </div>
+</body>
+
+</html>
