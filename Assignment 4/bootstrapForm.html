@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <title>Bootstrap Form</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container mt-5 w-50">
+        <h2 class="display-4 text-info mb-4 text-center">Application Form</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">User Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email ID</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+            </div>
+            <div class="form-group">
+                <label>Gender</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender" id="male" value="male" required>
+                    <label class="form-check-label" for="male">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender" id="female" value="female" required>
+                    <label class="form-check-label" for="female">Female</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Hobbies/Interests: </label><br>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="interest1" value="reading">
+                    <label class="form-check-label" for="interest1">Photography</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="interest2" value="traveling">
+                    <label class="form-check-label" for="interest2">Music</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="interest3" value="gaming">
+                    <label class="form-check-label" for="interest3">Movies</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="interest4" value="cooking">
+                    <label class="form-check-label" for="interest4">Gaming</label>
+                </div>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-info w-50">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
