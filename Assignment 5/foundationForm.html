@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form with Foundation</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"></script>
+</head>
+
+<body>
+
+    <div class="grid-container">
+        <div class="grid-x grid-padding-x align-center">
+            <div class=" medium-6 cell">
+                <h1 class="text-center">Application Form</h1>
+                <form>
+                    <div class="grid-x grid-padding-x">
+                        <div class="medium-12 cell">
+                            <label>Name
+                                <input type="text" placeholder="Enter your name" required>
+                            </label>
+                        </div>
+                        <div class="medium-12 cell">
+                            <label>Email
+                                <input type="email" placeholder="Enter your email" required>
+                            </label>
+                        </div>
+                        <div class="medium-12 cell">
+                            <label>Password
+                                <input type="password" placeholder="Enter your password" required>
+                            </label>
+                        </div>
+                        <div class="medium-12 cell">
+                            <label>Gender</label>
+                            <div>
+                                <input type="radio" name="gender" value="male" id="genderMale" required>
+                                <label for="genderMale">Male</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="gender" value="female" id="genderFemale" required>
+                                <label for="genderFemale">Female</label>
+                            </div>
+                        </div>
+                        <div class="medium-12 cell">
+                            <label>Interests</label>
+                            <div>
+                                <input type="checkbox" id="interestReading" name="interests" value="Reading">
+                                <label for="interestReading">Photography</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="interestTraveling" name="interests" value="Traveling">
+                                <label for="interestTraveling">Movies</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="interestCooking" name="interests" value="Cooking">
+                                <label for="interestCooking">Music</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="interestSports" name="interests" value="Sports">
+                                <label for="interestSports">Gaming</label>
+                            </div>
+                        </div>
+                        <div class="medium-12 cell">
+                            <button type="submit" class="button expanded alert">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
