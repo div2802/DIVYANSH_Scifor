@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable scope</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var varStr = "var string";
+        let letStr = "let string";
+        const constStr = "const string";
+
+        document.writeln("Global Scope:" + "<br>");
+        document.writeln("varStr: " + varStr + "<br>");
+        document.writeln("letStr: " + letStr + "<br>");
+        document.writeln("constStr: " + constStr + "<br><br>");
+
+        {
+            var varStr = "var string inside a block";
+            let letStr = "let string inside a block";
+
+            document.writeln("Inside Block:" + "<br>");
+            document.writeln("varStr: " + varStr + "<br>");
+            document.writeln("letStr: " + letStr + "<br><br>");
+        }
+
+        document.writeln("Outside Block:" + "<br>");
+        document.writeln("varStr: " + varStr + "<br>");
+        document.writeln("letStr: " + letStr + "<br>");
+        document.writeln("constStr: " + constStr + "<br>");
+
+    </script>
+</body>
+
+</html>
