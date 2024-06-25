@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculator</title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        function add(num1, num2) {
+            return num1 + num2;
+        }
+
+        function subtract(num1, num2) {
+            return num1 - num2;
+        }
+
+        function multiply(num1, num2) {
+            return num2 * num1;
+        }
+
+        function divide(num1, num2) {
+            return num1 / num2;
+        }
+
+        function calculator() {
+            let number1 = parseInt(prompt("Enter the first number:"));
+            let number2 = parseInt(prompt("Enter the second number:"));
+
+            let operation = prompt("Choose an operation: add, subtract, multiply, divide").toLowerCase();
+            let result;
+
+            if (operation === "add") {
+                result = add(number1, number2);
+            } else if (operation === "subtract") {
+                result = subtract(number1, number2);
+            } else if (operation === "multiply") {
+                result = multiply(number1, number2);
+            } else if (operation === "divide") {
+                result = divide(number1, number2);
+            } else {
+                result = "Invalid operation!";
+            }
+
+            alert("The result is: " + result);
+        }
+        calculator()
+    </script>
+</body>
+
+</html>
