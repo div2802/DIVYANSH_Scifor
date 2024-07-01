@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function newDate(inputDate) {
+            let curMonth = inputDate.getMonth();
+            inputDate.setMonth(curMonth + 1);
+            inputDate.setDate(15);
+            return inputDate;
+        }
+
+        // Example usage:
+        let dt = new Date('2024-05-10');
+        document.writeln('original date: ' + '</br>' + dt + '</br></br>');
+        document.writeln('new date: ' + '</br>' + newDate(dt));
+    </script>
+</body>
+
+</html>

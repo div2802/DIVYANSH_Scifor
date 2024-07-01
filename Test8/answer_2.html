@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function countChar(charArray) {
+            const charCount = {};
+            for (let char of charArray) {
+                if (charCount[char]) {
+                    charCount[char]++;
+                } else {
+                    charCount[char] = 1;
+                }
+            }
+            return charCount;
+        }
+        const chars = ['a', 'b', 'a', 'c', 'b', 'a', 'd'];
+        const result = countChar(chars);
+        document.writeln('array: ' + chars + '</br></br>');
+        document.writeln(JSON.stringify(result)); 
+    </script>
+</body>
+
+</html>

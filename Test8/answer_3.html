@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function reverseAndSortArray(charArray) {
+            const reversedArray = charArray.reverse();
+            const sortedArray = reversedArray.sort();
+            return sortedArray;
+        }
+        const chars = ['d', 'a', 'c', 'b', 'e'];
+        document.writeln('original array: ' + chars + '</br></br>');
+        const result = reverseAndSortArray(chars);
+        document.writeln('new array: ' + result); 
+    </script>
+</body>
+
+</html>

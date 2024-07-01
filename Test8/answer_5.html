@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function manipulateArray(inputArray) {
+            inputArray.push("volvo");
+            document.writeln("adding 'volvo': ", inputArray + '</br></br>');
+            const removedElement = inputArray.pop();
+            document.writeln("removing the last element: ", inputArray + '</br></br>');
+            const uppercaseArray = inputArray.map(str => str.toUpperCase());
+            document.writeln("Array uppercase: ", uppercaseArray + '</br></br>');
+            const joinedString = inputArray.join(", ");
+            document.writeln("Joined string: ", joinedString);
+            return {
+                modifiedArray: inputArray,
+                removedElement: removedElement,
+                uppercaseArray: uppercaseArray,
+                joinedString: joinedString
+            };
+        }
+        const strings = ["toyota", "ford", "honda"];
+        const result = manipulateArray(strings);
+
+    </script>
+</body>
+
+</html>
