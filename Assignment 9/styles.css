@@ -1,0 +1,57 @@
+body {
+    font-family: sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#container {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+#buttons {
+    margin-bottom: 1.8rem;
+}
+
+#fetchButton {
+    padding: 0.65rem 1.23rem;
+    margin: 0.35rem;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #057bf9;
+    font-weight: 600;
+    color: white;
+}
+
+#ajaxButton {
+    padding: 0.65rem 1.23rem;
+    margin: 0.35rem;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #f90505;
+    font-weight: 600;
+    color: white;
+}
+
+#fetchButton:hover {
+    background-color: #0056b3;
+}
+
+#ajaxButton:hover {
+    background-color: #b30000;
+}
+
+#dataDisplay {
+    text-align: left;
+    margin-top: 1.23rem;
+}
