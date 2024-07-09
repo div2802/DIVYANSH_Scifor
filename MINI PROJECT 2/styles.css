@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: rgb(33, 33, 33);
+    display: flex;
+    justify-content: center;
+}
+
+#mainContainer {
+    width: 70%;
+}
+
+#app-bar {
+    display: flex;
+    align-items: center;
+    margin: 0 0 2.5rem 0;
+    background: rgb(40, 40, 40);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#mainHeading {
+    flex-grow: 1;
+}
+
+#h3 {
+    /* color: #fff; */
+    padding: 1rem;
+    font-weight: 900;
+    font-size: 1.7rem;
+    width: 60%;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #ff8c05, #d61a5e);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 1rem;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+section {
+    padding: 2rem;
+    margin: 0 0 3rem 0;
+    background-color: rgb(40, 40, 40);
+    color: #ffffffd6;
+}
+
+
+#Container {
+    display: flex;
+    padding: 0.3rem;
+}
+
+#leftContainer {
+    flex-grow: 1;
+    padding: 0 1rem 0 0;
+}
+
+#homeHeading2 {
+    color: #dedddd;
+    margin-bottom: 1.875rem;
+    font-size: 1.25rem;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+}
+
+#homeHeading1 {
+    /* color: #ffffffd6; */
+    font-weight: 700;
+    font-size: 3.5rem;
+    text-transform: capitalize;
+    line-height: 81px;
+    margin-bottom: 1.875rem;
+    background: linear-gradient(to right, rgba(237, 140, 36, 255), rgba(210, 35, 94, 255));
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+}
+
+#contactBtn {
+    border: none;
+    border-radius: 3px;
+    padding: 0.9rem 1.15rem;
+    margin-top: 1.875rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fafafa;
+    background: linear-gradient(to right, rgba(237, 140, 36, 255), rgba(210, 35, 94, 255));
+    cursor: pointer;
+}
+
+#imgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home img {
+    max-width: 300px;
+    border-radius: 50%;
+}
+
+#aboutHeading {
+    font-weight: 700;
+    font-size: 1.75rem;
+    color: #ff8c05;
+    font-family: 'Roboto', sans-serif;
+}
+
+#aboutDesc {
+    font-size: 3.125rem;
+    font-weight: 900;
+    margin-bottom: 1.875rem;
+    line-height: 67px;
+}
+
+#aboutDescription {
+    color: #dedddd;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skills span {
+    padding: 0.5rem 1rem;
+    margin: 1rem 1rem 0.5rem 0;
+    background-color: rgba(255, 255, 255, 0.051);
+    color: #ffffffd6;
+    border-radius: 20px;
+}
+
+#about img {
+    max-width: 400px;
+    /* border-radius: 50%; */
+    border-radius: 1000px;
+}
+
+#projects {
+    background-color: transparent;
+}
+
+#project-h2 {
+    font-weight: 700;
+    font-size: 1.75rem;
+    color: #ff8c05;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.projectHeadings {
+    color: #ff8c05;
+    margin: 0.7rem 0 1.5rem 0;
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.projectDesc {
+    color: #dedddd;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+}
+
+.project-grid {
+    display: grid;
+    gap: 3rem;
+    /* padding: 1rem; */
+    box-sizing: border-box;
+}
+
+
+.project-item {
+    background-color: rgb(40, 40, 40);
+    padding: 2.5rem 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+#contactHeading {
+    font-weight: 700;
+    font-size: 1.75rem;
+    color: #ff8c05;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contact-content p {
+    color: #dedddd;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+}
+
+#contact {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact-content {
+    flex: 1;
+    padding: 2rem;
+    background-color: rgb(40, 40, 40);
+    color: #ffffffd6;
+}
+
+.contact-form {
+    flex: 1;
+    padding: 2rem;
+    background-color: rgb(40, 40, 40);
+    color: #ffffffd6;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-top: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+}
+
+#submitBtn {
+    border: none;
+    border-radius: 3px;
+    padding: 0.6rem 1.15rem;
+    margin-top: 1.875rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fafafa;
+    background: linear-gradient(to right, rgba(237, 140, 36, 255), rgba(210, 35, 94, 255));
+    cursor: pointer;
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.5rem;
+    /* background: #333; */
+    background: linear-gradient(to right, rgba(237, 140, 36, 255), rgba(210, 35, 94, 255));
+    color: #fff;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 2px;
+    display: none;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    nav ul {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1260px) {
+    #Container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .contact-content,
+    .contact-form {
+        flex: 100%;
+        padding: 2rem;
+    }
+}
+
+/* Extra small devices*/
+@media (max-width: 600px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Small devices */
+@media (min-width: 600px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
