@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -13,7 +17,7 @@ body {
 }
 
 #mainContainer {
-    width: 70%;
+    width: 80%;
 }
 
 #app-bar {
@@ -35,7 +39,7 @@ body {
     padding: 1rem;
     font-weight: 900;
     font-size: 1.7rem;
-    width: 60%;
+    width: 90%;
     text-transform: uppercase;
     background: linear-gradient(to right, #ff8c05, #d61a5e);
     -webkit-background-clip: text;
@@ -157,7 +161,7 @@ section {
 }
 
 #about img {
-    max-width: 400px;
+    max-width: 380px;
     /* border-radius: 50%; */
     border-radius: 1000px;
 }
@@ -189,12 +193,12 @@ section {
     margin-bottom: 1rem;
     font-size: 0.9rem;
     font-weight: 300;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.2px;
 }
 
 .project-grid {
     display: grid;
-    gap: 3rem;
+    gap: 1rem;
     /* padding: 1rem; */
     box-sizing: border-box;
 }
@@ -202,7 +206,7 @@ section {
 
 .project-item {
     background-color: rgb(40, 40, 40);
-    padding: 2.5rem 2rem;
+    padding: 1.5rem 1rem;
     border-radius: 8px;
     overflow: hidden;
     box-sizing: border-box;
@@ -295,45 +299,189 @@ section {
     cursor: pointer;
 }
 
-/* Responsive Design */
-@media (max-width: 900px) {
-    nav ul {
-        flex-direction: column;
+
+
+@media (max-width: 1450px) {
+    #about img {
+        max-width: 300px;
+        /* border-radius: 1px; */
     }
 }
 
-@media (max-width: 1260px) {
+@media (max-width: 1265px) {
     #Container {
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
     }
+
+    #imgContainer {
+        margin-bottom: 1rem;
+    }
+
+    #leftContainer {
+        padding: 1rem;
+    }
+
+    #aboutDesc {
+        font-size: 2.125rem;
+        line-height: 43px;
+        text-align: center;
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1060px) {
+    #mainContainer {
+        width: 90%;
+    }
+
+    #homeHeading1 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    #homeHeading2 {
+        margin-bottom: 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .skills span {
+        margin: 0.3rem 1rem 0.4rem 0;
+        font-size: 0.7rem;
+        font-weight: 600;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    #aboutDesc {
+        font-size: 1.5rem;
+        line-height: 35px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 785px) {
     .skills {
         justify-content: center;
     }
+
+    #homeHeading1 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        line-height: 41px;
+    }
+
+    #aboutHeading {
+        font-weight: 700;
+        font-size: 1.3rem;
+    }
+
+    #project-h2 {
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+
+    .projectHeadings {
+        font-size: 1rem;
+        letter-spacing: 1.4px;
+    }
 }
 
-@media (max-width: 768px) {
-
-    .contact-content,
-    .contact-form {
-        flex: 100%;
-        padding: 2rem;
+@media (max-width: 670px) {
+    #mainContainer {
+        width: 100%;
     }
 }
 
 /* Extra small devices*/
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .project-grid {
         grid-template-columns: 1fr;
+    }
+
+    .project-item {
+        padding: 2.5rem 2rem;
+    }
+
+    .contact-content,
+    .contact-form {
+        flex: 100%;
+        padding: 0.5rem 2rem;
+    }
+
+    #contactHeading {
+        font-size: 1.3rem;
+    }
+
+    #contactDesc {
+        font-size: 1rem;
+        letter-spacing: 1.2px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 0.3rem;
+        margin-top: 0.2rem;
+    }
+
+    #submitBtn {
+        padding: 0.4rem 1.1rem;
+        font-size: 0.9rem;
+        letter-spacing: 1.1px;
     }
 }
 
 /* Small devices */
-@media (min-width: 600px) {
+@media (min-width: 800px) {
     .project-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: #fff;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+@media (max-width: 700px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: rgb(40, 40, 40);
+        position: absolute;
+        top: 50px;
+        left: 0;
+        padding: 1.4rem 0 0.8rem 0;
+        /* text-align: right; */
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    #hamburger-menu {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 0 1rem;
+    }
+
+    nav ul li a {
+        padding: 0.3rem 1rem;
+        display: block;
     }
 }
