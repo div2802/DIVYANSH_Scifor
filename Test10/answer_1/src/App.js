@@ -4,11 +4,11 @@ import UserDetails from './Components/UserDetails';
 
 const App = () => {
   const user = {
-    name: 'John Doe',
-    age: 25,
-    email: 'john.doe@example.com',
-    mobileNo: '123-456-7890',
-    city: 'New York'
+    name: 'Divyansh Pandey',
+    age: 24,
+    email: 'pshubham1222@gmail.com',
+    mobileNo: '987654321',
+    city: 'India',
   };
 
   return (
