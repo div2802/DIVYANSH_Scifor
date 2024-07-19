@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React useContext Example</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <!-- Include React and ReactDOM development builds -->
+    <script src="https://unpkg.com/react/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js" crossorigin></script>
+    <!-- Include Babel standalone for JSX transpilation -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+
+        // Destructuring assignment to get createContext and useContext directly from React
+        const { createContext, useContext } = React;
+
+        // Create a context named UserContext
+        const UserContext = createContext();
+
+        // Functional component DisplayUser that consumes UserContext
+        function DisplayUser() {
+            const userName = useContext(UserContext); // Use useContext to access context value
+            return <h4>{userName}</h4>; // Display the username
+        }
+
+        // App component providing UserContext with a value
+        function App() {
+            return (
+                <UserContext.Provider value={'Hello there!!'}>
+                    <div>
+                        <h2>React useContext Example</h2>
+                        <DisplayUser />
+                    </div>
+                </UserContext.Provider>
+            );
+        }
+
+        // Render the App component inside the root div
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User List</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        const UserList = () => {
+            const [users, setUsers] = React.useState([]);
+
+            React.useEffect(() => {
+                fetch('https://randomuser.me/api/?results=10')
+                    .then(response => response.json())
+                    .then(data => {
+                        setUsers(data.results);
+                        setLoading(false);
+                    });
+            }, []);
+
+            const containerStyle = {
+                padding: '1rem 1.6rem 1rem 0',
+                backgroundColor: '#f8f8f8',
+                borderRadius: '5px',
+                maxWidth: '37.5rem',
+                margin: '5rem auto',
+            };
+
+            const listStyle = {
+                padding: '0.5rem',
+                margin: '0.5rem 0',
+                backgroundColor: '#fff',
+                borderRadius: '6px',
+                boxShadow: '0 0 4px rgba(0, 0, 0, 0.1)'
+            };
+
+            return (
+                <div style={containerStyle}>
+                    {
+                        (
+                            <ul>
+                                {users.map(user => (
+                                    <li key={user.login.uuid} style={listStyle}>
+                                        {user.name.first} {user.name.last}
+                                    </li>
+                                ))}
+                            </ul>
+                        )
+                    }
+                </div>
+            );
+        };
+
+        ReactDOM.render(<UserList />, document.getElementById('root'));
+    </script>
+</body>
+
+</html>

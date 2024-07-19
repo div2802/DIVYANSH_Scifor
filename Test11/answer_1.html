@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Username Input</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        const UsernameInput = () => {
+            const [username, setUsername] = React.useState('');
+
+            const handleChange = (event) => {
+                setUsername(event.target.value);
+            };
+
+            const mainContainer = {
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: '50rem',
+                margin: '0 auto',
+            }
+
+            const containerStyle = {
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                margin: '8rem 0',
+            }
+
+            const subContainer = {
+                display: 'flex',
+                flexDirection: 'column',
+                margin: '2rem 0',
+            }
+
+            const inputStyle = {
+                fontSize: '1rem',
+                padding: '0.4rem',
+                borderRadius: '4px'
+            }
+
+            const textStyle = {
+                fontSize: '1.2rem',
+                textTransform: 'capitalize',
+            }
+
+            return (
+                <div style={mainContainer}>
+                    <div style={containerStyle}>
+                        <div>
+                            <input style={inputStyle}
+                                type="text"
+                                value={username}
+                                onChange={handleChange}
+                                placeholder="Enter username"
+                            />
+                            <div style={subContainer}>
+                                <label>UserName:</label>
+                                <textarea style={textStyle} value={username} />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+
+        ReactDOM.render(<UsernameInput />, document.getElementById('root'));
+    </script>
+</body>
+
+</html>
