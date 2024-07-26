@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Context API Example</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const CounterContext = React.createContext();
+
+        function CounterProvider({ children }) {
+            const [count, setCount] = React.useState(0);
+            const increment = () => setCount(count + 1);
+            const decrement = () => setCount(count - 1);
+            const reset = () => setCount(0);
+
+            return (
+                <CounterContext.Provider value={{ count, increment, decrement, reset }}>
+                    {children}
+                </CounterContext.Provider>
+            );
+        }
+
+        function CounterDisplay() {
+            const { count } = React.useContext(CounterContext);
+            const headerStyle = {
+                fontSize: '1.5rem',
+                color: 'rgb(124 124 124)',
+                fontWeight: 400,
+                textAlign: 'center',
+                marginBottom: '1.6rem'
+            };
+            return <h1 style={headerStyle}>Count: {count}</h1>;
+        }
+
+        function CounterControls() {
+            const { increment, decrement, reset } = React.useContext(CounterContext);
+            const btnStyle = {
+                padding: '10px 20px',
+                fontSize: '1rem',
+                color: '#fff',
+                backgroundColor: 'rgb(161 66 255)',
+                border: 'none',
+                borderRadius: '5px',
+                cursor: 'pointer',
+                margin: '5px',
+            };
+            const divStyle = {
+                display: 'flex',
+                justifyContent: 'center',
+                width: '20rem'
+            };
+            const resetBtnStyle = {
+                padding: '6px 15px',
+                fontSize: '1rem',
+                color: 'rgb(161 66 255)',
+                backgroundColor: 'rgb(250 245 255)',
+                border: '1px solid rgb(161 66 255)',
+                borderRadius: '5px',
+                cursor: 'pointer',
+                margin: '5px',
+            };
+
+            return (
+                <div style={divStyle}>
+                    <button style={btnStyle} onClick={decrement}>-</button>
+                    <button style={btnStyle} onClick={increment}>+</button>
+                    <button style={resetBtnStyle} onClick={reset}>Reset</button>
+                </div>
+            );
+        }
+
+        function App() {
+            const appStyle = {
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                height: '100vh',
+                backgroundColor: 'rgb(244 241 249)',
+                fontFamily: 'Roboto, sans-serif',
+            };
+
+            const containerStyle = {
+                backgroundColor: '#fff',
+                padding: '20px',
+                borderRadius: '6px',
+                boxShadow: '0 0 10px rgba(0,0,0,0.1)',
+                textAlign: 'center'
+            };
+
+            return (
+                <CounterProvider>
+                    <div style={appStyle}>
+                        <div style={containerStyle}>
+                            <h1 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>Counter App</h1>
+                            <CounterDisplay />
+                            <CounterControls />
+                        </div>
+                    </div>
+                </CounterProvider>
+            );
+        }
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+
+</body>
+
+</html>

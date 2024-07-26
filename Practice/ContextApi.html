@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Context API Example</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const CounterContext = React.createContext();
+
+        function CounterProvider({ children }) {
+            const [count, setCount] = React.useState(0);
+            const increment = () => setCount(count + 1);
+            const decrement = () => setCount(count - 1);
+
+            return (
+                <CounterContext.Provider value={{ count, increment, decrement }}>
+                    {children}
+                </CounterContext.Provider>
+            );
+        }
+
+        function CounterDisplay() {
+            const { count } = React.useContext(CounterContext);
+            const headerStyle = {
+                fontSize: '2em',
+                color: '#333',
+                textAlign: 'center',
+                marginBottom: '20px'
+            };
+            return <h1 style={headerStyle}>Count: {count}</h1>;
+        }
+
+        function CounterControls() {
+            const { increment, decrement } = React.useContext(CounterContext);
+            const buttonStyle = {
+                padding: '10px 20px',
+                fontSize: '1em',
+                color: '#fff',
+                backgroundColor: '#007BFF',
+                border: 'none',
+                borderRadius: '5px',
+                cursor: 'pointer',
+                margin: '5px'
+            };
+            const divStyle = {
+                display: 'flex',
+                justifyContent: 'center',
+            };
+
+            return (
+                <div style={divStyle}>
+                    <button style={buttonStyle} onClick={decrement}>Decrement</button>
+                    <button style={buttonStyle} onClick={increment}>Increment</button>
+                </div>
+            );
+        }
+
+        function App() {
+            const appStyle = {
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                height: '100vh',
+                backgroundColor: '#f0f0f0',
+            };
+
+            return (
+                <CounterProvider>
+                    <div style={appStyle}>
+                        <h1>Counter App</h1>
+                        <CounterDisplay />
+                        <CounterControls />
+                    </div>
+                </CounterProvider>
+            );
+        }
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+
+</body>
+
+</html>
