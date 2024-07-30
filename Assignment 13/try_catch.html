@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try-Catch</title>
+</head>
+
+<body>
+    <script>
+        function f1(num) {
+            try {
+                if (num < 2) {
+                    throw new Error('Number must be greater than or equal to 2');
+                }
+                for (let i = 2; i <= Math.sqrt(num); i++) {
+                    if (num % i === 0) {
+                        console.log(num + ' is not a prime number.');
+                        return;
+                    }
+                }
+                console.log(num + ' is a prime number');
+            } catch (error) {
+                console.error('Error:', error.message);
+            }
+        }
+
+        function checkf1() {
+            f1(11);
+            f1(4);
+            f1(1);
+        }
+
+        checkf1();
+    </script>
+</body>
+
+</html>
