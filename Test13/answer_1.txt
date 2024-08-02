@@ -1,0 +1,22 @@
+Ques: What is a RESTfulAPI?	
+
+Answer:
+
+    A RESTful API stands for Representational State Transfer API. It is used to build APIs (Application Programming Interfaces) that allow different software systems to communicate with each other over HTTP, the protocol that powers the web. It is an architectural style for designing networked applications.
+
+    RESTful Api has following endpoints:
+
+        1. GET: Its purpose it to retrieve data from the server.
+           ex: `GET /user/1`
+
+        2. POST: Its purpose it to create a new resource on the server.
+           ex: `POST /user`
+
+        3. PUT: Its purpose it to update an existing resource or create a new resource if it doesn’t exist.
+           ex: `PUT /user/1`
+
+        4. PATCH: Its purpose it to partially update an existing resource.
+           ex: `PATCH /user/1`
+
+        5. DELETE: Its purpose it to remove a resource from the server.
+           ex: `DELETE /user/1`

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React App</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+
+        const F1 = () => {
+            const num1 = prompt("Enter first integer:");
+            const num2 = prompt("Enter second integer:");
+
+            try {
+                const n1 = parseInt(num1);
+                const n2 = parseInt(num2);
+
+                if (n2 === 0) {
+                    throw new Error("Division by zero is not allowed");
+                }
+
+                const result = n1 / n2;
+                alert(`Result: ${result}`);
+            } catch (e) {
+                alert(e.message);
+            }
+
+            return null;
+        };
+
+        ReactDOM.render(<F1 />, document.getElementById('root'));
+    </script>
+</body>
+
+</html>
